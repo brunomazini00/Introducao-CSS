@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento</title>
+<style>
+
+/* Todos elementos em uma única linha */
+#container-flexbox-row{
+    display: flex;
+    flex-direction: row;
+}
+
+#container-flexbox-row div,
+#container-flexbox-col div{
+    width: 100%;
+    height: 50px;
+    background-color: green;
+}
+
+/* Todos os elementos em uma única coluna */
+#container-flexbox-col{
+    display: flex;
+    flex-direction: column;
+}
+
+#container-grid{
+    display: grid;
+    grid-template-columns: 
+    100px 100px 100px 100px 100px 100px;
+    /* grid-template-rows:
+    100px 200px 10px 100px 200px 10px; */
+    color: #fff;
+}
+
+#container-grid div{
+    border: 1px solid #000;
+    background: #336666;
+}
+
+.img{
+    width: 400px;
+    height: 200px;
+}
+
+#container-texto{
+    width: 450px;
+    background-color: blue;
+    height: 200px;
+    overflow: auto;
+}
+
+.texto{
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* Posição absoluta - em relação ao elemento anterior */
+#container-absolute{
+    background-color: rgb(238, 130, 238);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 80px;
+    border: 3px solid #73AD21;
+    color:#000;
+}
+
+/* Posição estática - posição natural */
+#container-static{
+    border: 3px solid #73AD21;
+    width: 300px;
+    background: rgb(106, 90, 205);
+}
+
+/* Posição relativa - em relação ao seu posicionamento normal */
+#container-relative{
+    position: relative;
+    left: 30px;
+    border: 3px solid #73AD21;
+    width: 300px;
+    background: rgb(106, 90, 205);
+}
+
+/* Posição fix - em relação à viewport */
+#container-fixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+    background: orange;
+}
+
+</style>
+</head>
+<body>
+
+    <h1>Flex row</h1>
+    <div id="container-flexbox-row">
+        <div>Flexbox1</div>
+        <div>Flexbox2</div>
+        <div>Flexbox3</div>
+    </div>
+
+    <h1>Flex col</h1>
+    <div id="container-flexbox-col">
+        <div>Flexbox1</div>
+        <div>Flexbox2</div>
+        <div>Flexbox3</div>
+    </div>
+
+    <h1>Grid</h1>
+    <div id="container-grid">
+        <div>col1</div>
+        <div>col2</div>
+        <div>col3</div>
+        <div>col4</div>
+        <div>col5</div>
+        <div>col6</div>
+    </div>
+
+    <h1>Posição absoluta</h1>
+    <div id="container-absolute">
+        Absolute: Posicionando em relação ao elemento anterior ou, na ausência desse, em relação á tag body.
+    </div>
+
+    <h1>Posição estática</h1>
+    <div id="container-static">
+        Static: posicionamento natural do elemento.
+    </div>
+
+    <h1>Posição relativa</h1>
+    <div id="container-relative">
+        <div>
+            Relative: posicionamento em relação à sua posição natural (Static)
+        </div>
+    </div>
+
+    <h1>Posição fixa</h1>
+    <div id="container-fixed">
+        <div>
+            Fixed: posicionamento de forma fix em relação à viewport.
+        </div>
+    </div>
+
+    <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Boxmodell-detail.png/220px-Boxmodell-detail.png" >
+
+    <div id="container-texto">
+        <p>
+            <span class="texto">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio laboriosam nihil repellendus neque ab quod iusto rem voluptates aliquid iste? 
+            </span> 
+                Voluptatem necessitatibus aliquid rerum ex, debitis porro eum accusamus minus!   
+        </p>
+        <p>
+            <span class="texto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </span>
+                 Laborum deserunt saepe, assumenda obcaecati asperiores, vel voluptates ducimus dolorum impedit quia dignissimos minus quidem numquam! Exercitationem, aliquid! Eos distinctio sed pariatur! 
+        </p>
+    </div>
+
+</body>
+</html>
